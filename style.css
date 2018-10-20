@@ -1,0 +1,99 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+#camera, #camera--view, #camera--sensor, #camera--output{
+    position: fixed;
+    height: 100%;   /* can digital zoom with this */
+    width: 100%;
+    object-fit: cover;
+}
+#camera--view, #camera--sensor, #camera--output{
+    
+    /* flips image for selfie mode which isnt needed...
+    transform: scaleX(-1);
+    filter: FlipH;
+    */
+}
+#camera--trigger{
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 100px);
+    
+    /* hidding take image button */
+    display: hidden;
+}
+
+#camera--zoom{
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    top: 30px;
+    left: calc(50% - 100px);
+}
+#axisInput{
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: solid 3px white;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 123px);
+}
+
+.taken{
+    height: 100px!important;
+    width: 100px!important;
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    /* hiding for now as i do not want to stor this */
+    display: hidden;
+}
+
+
+          /*img*/
+          #grid, #axis {
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -150px; /* Width of image /2 */
+            margin-top: -150px; /* Height of image /2 */
+            z-index: 100;
+            
+            }
+          #axis {
+            z-index: 101;
+            }
+          
+/*  Style class to toggle 2x  */
+.double {
+    transform: scale(2);
+}
